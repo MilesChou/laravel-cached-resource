@@ -16,6 +16,9 @@ clean-all: clean
 check:
 	php vendor/bin/phpcs
 
+cbf:
+	php vendor/bin/phpcbf
+
 test: clean check
 	phpdbg -qrr vendor/bin/phpunit --testdox
 

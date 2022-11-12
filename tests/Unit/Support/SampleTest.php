@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Tests\Unit;
+namespace Tests\Unit\Support;
 
-use MilesChou\Template\Sample;
+use MilesChou\Laravel\Support\CachedManager;
 use Tests\TestCase;
 
 class SampleTest extends TestCase
@@ -14,6 +14,8 @@ class SampleTest extends TestCase
      */
     public function sample(): void
     {
-        $this->assertTrue((new Sample())->alwaysTrue());
+        $target = new CachedManager();
+
+        $this->assertTrue(true);
     }
 }
